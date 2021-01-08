@@ -14,7 +14,7 @@ LABEL name="thecodewithin/gluster-centos" \
       description="Gluster Image is based on CentOS Image which is a scalable network filesystem. Using common off-the-shelf hardware, you can create large, distributed storage solutions for media streaming, data analysis, and other data- and bandwidth-intensive tasks." \
       io.openshift.tags="gluster,glusterfs,glusterfs-centos"
 
-RUN yum --setopt=tsflags=nodocs -y update && yum install -y python-rtslib centos-release-gluster && yum clean all && \
+RUN yum --setopt=tsflags=nodocs -y update && yum install -y centos-release-gluster && yum clean all && \
 (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == systemd-tmpfiles-setup.service ] || rm -f $i; done) && \
 rm -f /lib/systemd/system/multi-user.target.wants/* &&\
 rm -f /etc/systemd/system/*.wants/* &&\
@@ -23,6 +23,7 @@ rm -f /lib/systemd/system/sockets.target.wants/*udev* && \
 rm -f /lib/systemd/system/sockets.target.wants/*initctl* && \
 rm -f /lib/systemd/system/basic.target.wants/* &&\
 rm -f /lib/systemd/system/anaconda.target.wants/* &&\
+yum --setopt=tsflags=nodocs -y install python3-rtslib && \
 yum --setopt=tsflags=nodocs -y install nfs-utils && \
 yum --setopt=tsflags=nodocs -y install attr  && \
 yum --setopt=tsflags=nodocs -y install iputils  && \
