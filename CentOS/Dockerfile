@@ -1,4 +1,4 @@
-FROM centos:7
+FROM centos:8
 
 MAINTAINER Humble Chirammal hchiramm@redhat.com Saravanakumar Arumugam sarumuga@redhat.com
 # Modified by thecodewithin
