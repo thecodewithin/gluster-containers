@@ -1,4 +1,4 @@
-FROM registry.fedoraproject.org/fedora:latest
+FROM registry.fedoraproject.org/fedora:33
 
 # Modified by thecodewithin
 
