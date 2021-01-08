@@ -1,4 +1,4 @@
-FROM centos:8
+FROM centos:7
 
 MAINTAINER Humble Chirammal hchiramm@redhat.com Saravanakumar Arumugam sarumuga@redhat.com
 # Modified by thecodewithin
@@ -23,7 +23,6 @@ rm -f /lib/systemd/system/sockets.target.wants/*udev* && \
 rm -f /lib/systemd/system/sockets.target.wants/*initctl* && \
 rm -f /lib/systemd/system/basic.target.wants/* &&\
 rm -f /lib/systemd/system/anaconda.target.wants/* &&\
-yum --setopt=tsflags=nodocs -y install python3-rtslib && \
 yum --setopt=tsflags=nodocs -y install nfs-utils && \
 yum --setopt=tsflags=nodocs -y install attr  && \
 yum --setopt=tsflags=nodocs -y install iputils  && \
