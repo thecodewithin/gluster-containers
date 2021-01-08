@@ -2,12 +2,11 @@ FROM fedora
 
 MAINTAINER Humble Devassy Chirammal  <hchiramm@redhat.com>
 
-LABEL architecture="x86_64" \
-      name="gluster/glusterfs-client" \
-      version="4.1" \
+LABEL name="thecodewithin/glusterfs-client" \
+      version="8.3" \
       vendor="Red Hat, Inc" \
       summary="This image has a running glusterfs service ( Fedora + Gluster 4.1 client)" \
-      io.k8s.display-name="Gluster 4.1 client based on Fedora" \
+      io.k8s.display-name="Gluster 8.3 client based on Fedora" \
       io.k8s.description="Gluster Client Image is based on Fedora Image which is used to mount a glusterfs volume." \
       description="Gluster Client Image is based on Fedora Image which is used to mount a glusterfs volume." \
       io.openshift.tags="gluster,glusterfs,glusterfs-client"
