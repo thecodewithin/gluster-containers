@@ -1,4 +1,4 @@
-name: ci
+name: ci gluster-client
 
 on:
   push:
@@ -32,4 +32,4 @@ jobs:
          run: |
            docker buildx build --push \
              --tag thecodewithin/gluster-client:latest \
-             --platform linux/amd64,linux/arm/v7,linux/arm64 . 
+             --platform linux/amd64,linux/arm/v7,linux/arm64 ./gluster-client/ 
