@@ -1,7 +1,7 @@
 FROM fedora
 
 MAINTAINER Humble Devassy Chirammal  <hchiramm@redhat.com>
-# Modified by thecodewitin
+# Modified by thecodewithin
 
 LABEL name="thecodewithin/glusterfs-client" \
       version="8.3" \

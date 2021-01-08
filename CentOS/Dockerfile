@@ -1,12 +1,11 @@
 FROM centos:7
 
 MAINTAINER Humble Chirammal hchiramm@redhat.com Saravanakumar Arumugam sarumuga@redhat.com
+# Modified by thecodewithin
 
 ENV container docker
 
-ENV ARCH "x86_64"
-LABEL architecture="$ARCH" \
-      name="gluster/gluster-centos" \
+LABEL name="thecodewithin/gluster-centos" \
       version="latest" \
       vendor="CentOS Community" \
       summary="This image has a running glusterfs service (CentOS 7 + latest Gluster)" \

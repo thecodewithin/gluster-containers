@@ -1,17 +1,17 @@
 FROM registry.fedoraproject.org/fedora:latest
 
+# Modified by thecodewithin
+
 ENV NAME="gluster-fedora" \
     DESC="GlusterFS on Fedora" \
     VERSION=0 \
     RELEASE=1 \
-    ARCH=x86_64 \
-    REPO="$FGC" \
+    REPO="thecodewithin" \
     container=docker
 
 LABEL name="$REPO/$NAME" \
       version="$VERSION" \
       release="$RELEASE.$DISTTAG" \
-      architecture="$ARCH" \
       vendor="Red Hat, Inc" \
       summary="$DESC" \
       usage="docker run -d -P --tmpfs /run --tmpfs /tmp -v /sys/fs/cgroup:/sys/fs/cgroup $REPO/$NAME" \
